@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forLoop</title>
+</head>
+<body>
+    <script>
+        // infinity loop
+        // for (; ;){
+        //     alert("for Loop");
+        // }
+
+        // pengulangan dengan kondisi
+        let counter = 5;
+        for (; counter <= 10;) {
+            document.writeln(`<p>Perulangan ke ${counter}</p>`)
+            counter++;
+        }
+
+        // pengulangan dengan init component
+        for (let counter2 = 5; counter2 <= 10;) {
+            document.writeln(`<p>Perulangan 2 ke ${counter2}</p>`)
+            counter2++;
+        }
+
+        // pengulangan dengan post statement
+        for (let counter3 = 5; counter3 <= 10; counter3++) {
+            document.writeln(`<p>Perulangan 3 ke ${counter3}</p>`);
+        }
+    </script>
+</body>
+</html>

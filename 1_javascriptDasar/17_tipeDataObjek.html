@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tipe data objek</title>
+</head>
+<body>
+    <script>
+        const person = {};
+        // skill property / atribute
+        person['nama'] = "Ari Syafri";
+        person['alamat'] = "Indonesia";
+        person['umur'] = 18;
+
+        console.table(person);
+        delete person['umur'];
+        console.table(person);
+
+        // membuat objek dengan properties
+        const orang = {
+            nama: "Aerial Heavenly",
+            alamat: "alfheim",
+            umur: 150
+        };
+        console.table(orang);
+
+        // mengakses property objek
+        console.info(`Nama : ${orang.nama}`);
+        console.info(`Alamat : ${orang.alamat}`);
+        console.info(`Umur : ${orang.umur}`);
+    </script>
+</body>
+</html>

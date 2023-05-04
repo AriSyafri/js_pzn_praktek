@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>non Boolean</title>
+</head>
+<body>
+    <script>
+        // operator or yang pertama truthy
+        console.info("hello" || "");
+        console.info("" || []);
+        console.info("0" || "NOL");
+        console.info(0 || "Nol");
+        console.info(null || "kosong");
+        console.info(undefined || "kosong juga");
+        console.info(0 || false); // falsy yang paling terakhir false
+
+        // contoh penggunaan
+        const person = {
+            firstName: "Ari",
+            lastName: "Syafri"
+        };
+
+        const name = person.firstNamee || person.lastName;
+        console.info(name);
+
+        // operator and (&&)
+        // operator or yang pertama falsy
+        console.info("hello" && "");
+        console.info("" && []);
+        console.info("0" && "NOL");
+        console.info(0 && "Nol");
+        console.info(null && "kosong");
+        console.info(undefined && "kosong juga");
+        console.info(0 & false);
+
+        // contoh penggunaan
+        const person2 = {
+            firstName: "Ari",
+            lastName: "Syafri"
+        };
+
+        const name2 = person2.firstNamee || person2.lastName;
+        console.info(name2);
+    </script>
+</body>
+</html>

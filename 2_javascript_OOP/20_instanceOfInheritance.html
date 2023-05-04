@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator instanceof di inheritance</title>
+</head>
+<body>
+    <script>
+        class Employee {
+
+        }
+
+        class Manager extends Employee{
+
+        }
+
+        const budi = new Employee();
+        const ari = new Manager();
+
+
+        console.info(budi instanceof Employee); // true
+        console.info(budi instanceof Manager);  // false
+
+        // true karena manager adalah turunan dari employee
+        console.info(ari instanceof Employee);  // true
+        console.info(ari instanceof Manager);   // true
+
+        
+    </script>
+</body>
+</html>

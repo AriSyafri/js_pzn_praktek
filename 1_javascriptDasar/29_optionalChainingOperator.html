@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>optional chaining</title>
+</head>
+<body>
+    <script>
+        // ini pasti error
+
+        // const person = {};
+        // document.writeln(`<p>Sukses</p>`);
+        // const country = person.address.country;
+        // document.writeln(`<p>${country}</p>`);
+        // document.writeln(`<p>Sukses</p>`);
+
+        // solusinya menggunakan if
+        // let person = {};
+        // let say;
+        // if (person.address !== undefined && person.address !== null) {
+        //     say = person.address.country;
+        // }
+        
+        // alert(say);
+
+        // menggunakan optional chaining
+        // const person = {};
+        const person = {
+            address: {
+                country: "indonesia"
+            }
+        };
+        let country = person?.address?.country;
+        // alert(person?.address?.country);
+        document.writeln(`<p>${country}</p>`);
+
+    </script>
+</body>
+</html>

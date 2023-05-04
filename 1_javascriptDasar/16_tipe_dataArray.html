@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        let arrayKosong = [];
+
+        let arrayName = ["Ari", "Syafri", "IF2"];
+
+        const names = [];
+        names.push("Ujang");
+        names.push("Asep","Goyobod");
+        names.push("Yuval","Harari","Noah");
+
+        console.table(names);
+
+        // operasi di array
+        // Operasi                             Keterangan
+        //===================================================================
+        // array.push(value)                   Menambah data ke array
+        // array.length                        mendapatkan panjang array
+        // array[index]                        mendapatkan data di posisi x
+        // array[index] = value                mengubah data di posisi index
+        // delete array[index]                 menghapus data di posisi index, namun index tidak bergeser
+
+        console.info(names[0]);
+        console.info(names[1]);
+        console.info(names[2]);
+
+        names[0] = "diganti";
+        console.table(names);
+
+        delete names[3];
+        console.table(names);
+
+        names.push("ditambah lagi");
+        console.table(names);
+
+        names[3] = "diubah lagi";
+        names.push(1,2,3,4,5);
+        names.push(["Paul","kalanithi"]);
+        console.table(names);
+    </script>
+</body>
+</html>

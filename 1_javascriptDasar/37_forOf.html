@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forOf</title>
+</head>
+<body>
+    <script>
+        // melakukan iterasi di setiap value nya
+        // dengan array
+        const names = ["Ari","Syafri","Agus"];
+        for (const name of names) {
+            document.writeln(`<p>${name} : ${names[name]}</p>`);
+        }
+
+        // dengan string
+        const fullName = "Sherlock Holmes";
+        for(const character of fullName){
+            document.writeln(`<p>${character}</p>`);
+        }
+    </script>
+</body>
+</html>

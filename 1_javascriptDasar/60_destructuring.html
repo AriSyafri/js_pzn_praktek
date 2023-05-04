@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        // mengambil data array
+        const names = ["Ari","Syafri","Agus"];
+        const firstName1 = names[0];
+        const middleName1 = names[1];
+        const lastName1 = names[2];
+
+        console.info(firstName1);
+        console.info(middleName1);
+        console.info(lastName1);
+
+        // menggunakan destructuring
+        const names2 = ["Aris", "Agustian", "Mancur", "Hidayat"];
+        const [firstName,middleName,...other] = names2;
+        console.info(firstName);
+        console.info(middleName);
+        console.info(other);
+
+        // mengambil data di objek tanpa destructuring
+        const person = {
+            namaDepan : "Frank",
+            namaBelakang : "Lampard",
+            alamat : {
+                jalan : "Baker",
+                kota : "London",
+                negara : "Indonesia"
+            },
+            hobby : "Membaca"
+        }
+        // const namaDepan = person.namaDepan;
+        // const namaBelakang = person.namaBelakang;
+
+        // console.info(namaDepan);
+        // console.info(namaBelakang);
+        // console.info(person.alamat.jalan);
+
+
+        // menggunakan destructuring
+        // const {namaDepan2, namaBelakang2, alamat2, ...lainnya2} = person;
+        // console.info(namaBelakang2);
+        // console.info(lainnya2);
+
+        // destructuring nested object
+        const {namaDepan, namaBelakang, alamat:{jalan,kota,negara}, ...lainnya} = person;
+        console.info(namaDepan);
+        console.info(lainnya);
+        console.info(jalan);
+        console.info(kota);
+
+        // destructuring function parameter
+        
+
+    </script>
+</body>
+</html>

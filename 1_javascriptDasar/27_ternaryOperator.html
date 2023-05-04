@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ternary Operator</title>
+</head>
+<body>
+    <script>
+
+        // tanpa ternary operator
+        document.writeln("tanpa ternary operator <br>");
+        const nilai = 70;
+        let ucapan;
+
+        if (nilai >= 75){
+            ucapan = "selamat anda lulus";
+        } else {
+            ucapan = "Silahkan coba lagi";
+        }
+        document.writeln(`${ucapan} <br>`);
+
+        // menggunakan ternary operator
+        document.writeln("dengan ternary operator <br>");
+        const nilai2 = 60;
+        const ucapan2 = nilai2 >= 75 ? "selamat anda lulus" : "silahkan coba lagi";
+
+        document.writeln(`${ucapan2}`);
+
+    </script>
+
+</body>
+</html>

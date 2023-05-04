@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funct Value</title>
+</head>
+<body>
+    <script>
+        // function di variabel
+        function sayHello(name){
+            console.info(`Hello ${name}`);
+        }
+
+        let say = sayHello;
+
+        sayHello("Ari");
+        say("acep"); 
+        
+        // function dikirim ke parameter
+        function giveName(callback) {
+            callback("Jajang");
+        }
+        giveName(sayHello);
+        giveName(say);
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>in operator</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName: "Ari",
+            lastName: "Syafri"
+        }
+
+        const result = "firstName" in person; //true
+        document.writeln(`<p>${result}</p>`);
+
+
+        // operator in untuk memeriksa indeks dan properti bukan memvalidasi nilai dan tipe data berupa apa saja
+
+        const student = {
+            firtsName: "Ujang",
+            middleName: undefined,
+            lastName: "Goyobod"
+        }
+
+        // buat meriksa undefined
+        if(typeof student.MiddleName === "undefined"){
+            alert("undefined")
+        }
+
+        // bagian in operaror
+        if ("middleName" in student) {
+            alert(`Hello ${student.middleName}`);
+        } else {
+            alert("Hello pelajar");
+        }
+
+        // in di array
+        const names = [null, "Ari Syafri", null];
+        const result2 = 0 in names;
+        document.writeln(`<p>${result2}</p>`);
+
+    </script>
+</body>
+</html>

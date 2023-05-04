@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest Parameter</title>
+</head>
+<body>
+    <script>
+        // rest parameter
+        function sum(name, testing = "abaikan", ...data) {
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            console.info(`total ${name} ${testing} is ${total}`);
+        }
+
+        sum('orange',undefined, 2,3,3,5,6);
+        sum('apple',4,2,7,8,4);
+        sum('banana', 9,8,6,5);
+        sum('banana2', 9,8,6,5);
+
+        // spread syntax
+        // yang semula jika array
+        const values = [10,10,10,10];
+        sum("tes",values); // tidak sesuai 
+
+        //solusinya
+        const values2 = [10,10,10,10];
+        sum("test2", ...values2);
+
+        // fitur lama js
+        // arguments object jarang digunakan semenjak adanya rest parameter
+        function oldSum(){
+            let totalNew = 0;
+            for (const items of arguments) {
+                totalNew += items;
+            }
+            console.log(`total id ${totalNew}`);
+        }
+        oldSum(1,2,3,4,5,6,7);
+
+
+
+
+    </script>
+</body>
+</html>

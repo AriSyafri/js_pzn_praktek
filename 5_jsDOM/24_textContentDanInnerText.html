@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inner text dan inner html</title>
+</head>
+<body>
+    <p id="content">
+        <script>
+            console.info("hello world");
+        </script>
+        <b>Ari</b> syafri <i>Nu kasep</i>
+    </p>
+
+    <script>
+        const content = document.getElementById("content");
+        // keduanya mengambil isi text tapi inner text lebih pinter istilahnya
+        console.info(content.textContent);
+        console.info(content.innerText);
+        
+        // ini inner html mengambil data hingga tagnya
+        console.info(content.innerHTML);
+    </script>
+</body>
+</html>

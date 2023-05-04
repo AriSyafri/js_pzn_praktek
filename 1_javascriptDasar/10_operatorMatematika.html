@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator aritmatika</title>
+</head>
+<body>
+    <script>
+
+        // operasi aritmatika
+        let result = 1 + 2;//3
+        document.writeln("<p> 1 + 2 = " + result + "</p>");
+        let originalResult = result; // 3
+        
+        result = result - 1; //2
+        document.writeln("<p>" + originalResult + " - 1 = " + result + "</p>");
+        originalResult = result;
+
+        result = result * 2; //4
+        document.writeln("<p>" + originalResult + " x 2 = " + result + "</p>");
+        originalResult = result;
+
+        // operator aritmatika augmented assigment
+
+        result += 3;  //7
+        document.writeln("<p>" + originalResult +" + 3 = " + result + "</p>");
+        originalResult = result;
+        result *= 3; // 7 + 3
+        document.writeln("<p>" + originalResult +" x 3 = " + result + "</p>");
+        originalResult = result;
+
+        // operator unary
+        result = +1;
+        document.writeln("<p> hasil  + 1 = " + result + "</p>");
+
+        result = -1;
+        document.writeln("<p> hasil - 1 = " + result + "</p>");
+
+        result++;
+        document.writeln("<p> increment = " + result + "</p>");
+
+        result--;
+        document.writeln("<p> decrement = " + result + "</p>");
+
+    </script>
+</body>
+</html>

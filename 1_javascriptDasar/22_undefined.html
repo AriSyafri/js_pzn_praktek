@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>undefined</title>
+</head>
+<body>
+    <script>
+        // undefined biasa
+        let name; //undefined
+        // let name = "ari" //defined
+        if (name === undefined) {
+            console.info("UNDEFINED");
+        } else {
+            console.info("DEFINED");
+        }
+
+        // undefined di array
+        const names = ["Ari", "Syafri","Ujang"];
+        if(names[2] === undefined) {
+            console.info("Array Undefined");
+        } else {
+            console.info(`Array Defined ${names[2]}`);
+        }
+
+        // undefined object property
+        // let person = {
+        //     name : "ari"
+        // };
+        let person = {};
+        person['name'] = "Ari";
+        
+        if (person.name === undefined) {
+            console.info("object undefined");
+        } else {
+            console.info(`object defined ${person.name}`);
+        }
+
+    </script>
+</body>
+</html>

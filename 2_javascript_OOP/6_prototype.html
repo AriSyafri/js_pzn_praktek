@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+<body>
+    <script>
+
+        // parameter di constructor function
+        function Person(firstName, lastName){
+            this.firstName = firstName;
+            this.lastName  = lastName;
+            this.sayHello = function (name) {
+                console.info(`Hello ${name}, my name is ${this.firstName} ${this.lastName}`);
+            } 
+        }
+
+        // membuat objek instance (objek dalam prototype disebut objek instance)
+        // const ari = new Person("Ari", "Syafri");
+        // menambah property ke instance objek
+        // ari.sayBye = function () {
+        //     console.info("Bai bai");
+        // }
+
+        Person.prototype.sayBye = function (){
+            console.info("Good bye")
+        }
+
+        Person.prototype.run = function (){
+            console.info(`${this.firstName} is running`)
+        }
+
+        const ari = new Person("Ari", "Syafri");
+        // ini diakses duluan kalo gaada nanti pake prototype
+        ari.sayBye = function (){
+            console.info("Hahay")
+        }
+
+        const budi = new Person("Budi","Suryanto");
+        // akses
+        ari.sayBye();
+        ari.sayHello("Ari");
+
+
+        console.info(ari);
+        console.info(budi);
+
+    </script>
+</body>
+</html>
